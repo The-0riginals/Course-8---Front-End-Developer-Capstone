@@ -1,0 +1,7 @@
+A hero : is a large banner or image that appears as one of the first items on a page. It's a primary visual element that is used to focus user attention on key content or promotions.
+
+Png and svg:
+While PNGs are capable of handling very high resolutions, they're not infinitely expandable. On the other hand, SVG files are vector-based — built from a complex mathematical network of lines, dots, shapes, and algorithms. They can expand to any size without losing their resolution.
+
+testimonials:
+A testimonial is like a personal recommendation. If you give a testimonial on behalf of a restaurant, then you really like that restaurant.
