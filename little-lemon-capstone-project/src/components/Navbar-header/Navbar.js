@@ -7,7 +7,7 @@ import './Navbar.css'
 
 const Navbar = () => {
     const [isMenuOpen, setisMenuOpen] = useState(false)
-    const navigate = useNavigate()
+    const navigate = useNavigate() // hook to navigate to different pages
 
     //function to toggle(switch/swap?) menu (open/close)
     const toggleMenu = () => {
@@ -31,7 +31,9 @@ const Navbar = () => {
             <div className="logo">
                 <img src={Logo} alt="logo" onClick={onClickImage} />
             </div>
-            <nav className={`nav ${isMenuOpen ? 'show' : ''}`}>
+            {/* // if isMenuOpen is true, then add 'show' class to nav*/}
+            <nav className={`nav ${isMenuOpen ? 'show' : ''}`}> 
+                {console.log(isMenuOpen)}
                 <ul className={`menu-list ${isMenuOpen ? 'show' : ''}`}>
                     {menuItems.map((item) => (
                         <li key={item.id} >
