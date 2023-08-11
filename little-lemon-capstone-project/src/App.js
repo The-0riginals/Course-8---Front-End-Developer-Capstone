@@ -3,10 +3,8 @@ import Layout from "./layouts/Layout";
 import { Routes, Route } from "react-router-dom";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-
-const pages = new Map();
-pages.set("about", { path: "/about", name: "About", anchorable: true });
-pages.set("contact", { path: "/contact", name: "Contact", anchorable: true });
+import pages from "./utils/pages";
+import Reserve from "./pages/Reserve/Reserve";
 
 function App() {
   return (
@@ -16,6 +14,7 @@ function App() {
           <Route path="/" element={<h1>Home</h1>} />
           <Route path={pages.get("about").path} element={<About />} />
           <Route path={pages.get("contact").path} element={<Contact />} />
+          <Route path={pages.get("reserve").path} element={<Reserve/>} />
         </Routes>
       </Layout>
     </div>

@@ -139,6 +139,5 @@ function Contact() {
       </div>
     );
   }
-  
+
   export default Contact;
-  
