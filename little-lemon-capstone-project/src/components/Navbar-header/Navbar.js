@@ -33,7 +33,6 @@ const Navbar = () => {
             </div>
             {/* // if isMenuOpen is true, then add 'show' class to nav*/}
             <nav className={`nav ${isMenuOpen ? 'show' : ''}`}> 
-                {console.log(isMenuOpen)}
                 <ul className={`menu-list ${isMenuOpen ? 'show' : ''}`}>
                     {menuItems.map((item) => (
                         <li key={item.id} >

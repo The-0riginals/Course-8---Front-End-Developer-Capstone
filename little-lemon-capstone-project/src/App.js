@@ -5,6 +5,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import pages from "./utils/pages";
 import Reserve from "./pages/Reserve/Reserve";
+import Menu from "./pages/Menu/Menu";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path={pages.get("about").path} element={<About />} />
           <Route path={pages.get("contact").path} element={<Contact />} />
           <Route path={pages.get("reserve").path} element={<Reserve/>} />
+          <Route path={pages.get("menu").path} element={<Menu/>} />
         </Routes>
       </Layout>
     </div>

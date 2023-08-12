@@ -132,7 +132,7 @@ function Contact() {
             </div>
 
             <button type="submit" disabled={!getIsFormValid()}>
-              Create account
+              Send message
             </button>
           </fieldset>
         </form>
