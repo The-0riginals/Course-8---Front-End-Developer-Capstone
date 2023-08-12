@@ -17,7 +17,9 @@
     background: #f00;
     border-radius: 15px;
   }
-  
+  /*The ::after pseudo-element inserts content after the content of an element
+    The ::before pseudo-element inserts content before the content of an element
+    The content: '' property is used to ensure that the pseudo-elements are generated even though they don't have actual content.*/
   .card .imgBx::before {
     content: '';
     position: absolute;
