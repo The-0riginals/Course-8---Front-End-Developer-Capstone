@@ -39,8 +39,8 @@ const Reserve = () => {
     }
 
     return (
-        <div className="Reserve" data-testid="reservations-component">
-            <div className="Reserve-card">
+        <div className="reservation" data-testid="reservations-component">
+            <div className="reservation-card">
                 <h1 className="reservation-title"> Table Reservations</h1>
                 <BookingForm
                     onFormSubmit={handleFormSubmit}

@@ -1,12 +1,13 @@
-.reservation-container {
+.Reservation-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+  
   }
 
   .containter-item-title {
-    color: #fff;
+    color: wheat;
     font-size: 20px;
     text-align: center;
   }

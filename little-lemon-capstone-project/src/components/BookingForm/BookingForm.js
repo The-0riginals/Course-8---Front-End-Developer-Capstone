@@ -39,7 +39,7 @@ const BookingForm = ({
     return (
         <form onSubmit={(e) => onFormSubmit(e, formData)}>
             <div className="Reservation-container">
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName" className="containter-item-title">First Name</label>
                 <input
                     type="text"
                     name="firstName"
@@ -52,7 +52,7 @@ const BookingForm = ({
                 />
             </div>
             <div className="Reservation-container">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName" className="containter-item-title">Last Name</label>
                 <input
                     type="text"
                     name="lastName"
@@ -63,7 +63,7 @@ const BookingForm = ({
                 />
             </div>
             <div className="Reservation-container">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="containter-item-title">Email</label>
                 <input
                     type="email"
                     name="email"
@@ -77,7 +77,7 @@ const BookingForm = ({
             </div>
 
             <div className="Reservation-container">
-                <label htmlFor="date">Date</label>
+                <label htmlFor="date" className="containter-item-title">Date</label>
                 <input
                     type="date"
                     name="date"
@@ -90,7 +90,7 @@ const BookingForm = ({
             </div>
 
             <div className="Reservation-container">
-                <label htmlFor="time">Time</label>
+                <label htmlFor="time" className="containter-item-title">Time</label>
                 <select
                     name="time"
                     id="time"
@@ -143,7 +143,7 @@ const BookingForm = ({
                 </select>
             </div>
 
-            <div className="Reservation-container">
+            <div className="reservation-button">
                 <Button title="Book a table" type="submit" />
             </div>
         </form>

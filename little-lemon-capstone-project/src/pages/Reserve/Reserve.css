@@ -1,11 +1,16 @@
 .reservation {
-    height: calc(100vh - 96px - 266px);
-    width: 100vw;
-    max-width: 65rem;
-    margin: 0 auto;
+    height: calc(100vh - 96px - 4rem );
+    width: 120vw;
+    max-width: 75rem;
+    margin: auto ;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../assets/reservation-background.jpg");
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image within the container */
+
+  
   }
   
   .reservation-card {
@@ -13,6 +18,7 @@
     border-radius: 16px;
     padding: 2rem;
     width: 50%;
+
   }
   
   .reservation-title {
@@ -27,13 +33,15 @@
   }
   @media screen and (max-width: 767px) {
     .reservation {
-      height: calc(100vh - 96px);
+      height: calc(100vh - 96px - 0rem);
       width: 100vw;
       max-width: 65rem;
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-size: cover; /* Ensure the image covers the entire container */
+      background-position: center; /* Center the image within the container */
       
     }
   
