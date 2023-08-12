@@ -4,10 +4,15 @@
     align-items: center;
     padding: 2rem;
   }
+.text-content{
+    padding: 1em;
+    color: black !important;
+    background-color: #645a1d;
+}
   
-  .text-center {
+.text-center {
     text-align: center;
-  }
+}
   
   .about-content {
     padding: 2rem;
@@ -28,7 +33,7 @@
   }
   
   .lemon-primary-dark {
-    background-color: #495e57;
+    background-color: whitesmoke;
   }
   
   .lemon-primary-lemon {

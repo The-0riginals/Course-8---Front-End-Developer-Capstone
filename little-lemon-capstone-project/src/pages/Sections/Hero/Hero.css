@@ -19,6 +19,7 @@
     grid-template-columns: 60fr 40fr;
     max-width: 65rem;
     margin: 0 auto;
+    margin-left: 1em;
   }
   
   .title {
