@@ -9,11 +9,11 @@ import  { useState } from "react";
 import { validateEmail } from "../../utils/validationSchemas";
 import "./Contact.css";
 
-const PasswordErrorMessage = (e) => {
-    return (
-      <p className="FieldError">Password should have at least 8 characters</p>
-    )
-};
+// const PasswordErrorMessage = (e) => {
+//     return (
+//       <p className="FieldError">Password should have at least 8 characters</p>
+//     )
+// };
 function Contact() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -31,8 +31,8 @@ function Contact() {
         firstName &&
         validateEmail(email) &&
         //password.value.length >= 8 &&
-        role !== 'role' &&
-        message
+         role !== 'role' &&
+         message
       );
     };
   
@@ -52,6 +52,7 @@ function Contact() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      console.log("Form submitted! testttttt");
       alert(" Form submited!");
       clearForm();
     };
@@ -63,14 +64,15 @@ function Contact() {
             <h2>Contact us</h2>
   
             <div className="Field">
-              <label>
+              <label htmlFor="firstNameInput">
                 First name <sup>*</sup> {/*sup is for superscript: requirement */}
               </label>
               <input
+                id="firstNameInput"
                 type="text"
                 value={firstName}
                 onChange={e => setFirstName(e.target.value)}
-                placeholder="Last name"
+                placeholder="First name"
               />
             </div>
   
@@ -114,10 +116,14 @@ function Contact() {
             </div> */}
   
             <div className="Field">
-              <label>
+              <label htmlFor="roleSelect">
                 Role <sup>*</sup>
               </label>
-              <select value={role} onChange={(e) => setRole(e.target.value)}>
+              <select 
+                id="roleSelect"
+                value={role}
+                onChange={(e) => setRole(e.target.value)
+              }>
                 <option value="role">Role</option>
                 <option value="customer">Customer</option>
                 <option value="business">Business</option>
@@ -125,17 +131,25 @@ function Contact() {
             </div>
 
             <div className="Field"> {/*Field for comment*/}
-                <label>
+                <label htmlFor="message">
                     Message: <sup>*</sup>
                 </label>
-                <textarea value={message} onChange={e => setMessage(e.target.value)} />
+                <textarea
+                id="message"
+                placeholder="Please enter the Message"
+                value={message}
+                onChange={e => setMessage(e.target.value)} />
             </div>
 
             <button type="submit" disabled={!getIsFormValid()}>
+              {/* {console.log(!getIsFormValid())} */}
               Send message
             </button>
           </fieldset>
         </form>
+        <div aria-live="polite" role="status"> {/*aria-live is for screen readers- test purpose*/}
+          {message && <p>Form submitted!</p>}
+        </div>
       </div>
     );
   }

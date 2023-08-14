@@ -27,7 +27,7 @@ const Navbar = () => {
     ];
 
     return (
-        <header className="navbar">
+        <header className="navbar" data-testid="navbar">
             <div className="logo">
                 <img src={Logo} alt="logo" onClick={onClickImage} />
             </div>

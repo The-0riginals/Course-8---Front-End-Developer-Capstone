@@ -19,7 +19,7 @@ function App() {
           <Route path={pages.get("reserve").path} element={<Reserve/>} />
           <Route path={pages.get("menu").path} element={<Menu/>} />
           <Route path={pages.get("home").path} element={<Home/>} />
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<Home/>} />
         </Routes>
       </Layout>
     </div>

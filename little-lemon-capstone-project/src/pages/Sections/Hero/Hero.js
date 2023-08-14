@@ -12,7 +12,7 @@ const Hero = () => {
   }
 
   return (
-    <div className="hero-background">
+    <div className="hero-background" data-testid="hero-background">
       <div className="hero">
         <div>
           <h1 className="title">Little Lemon</h1>
