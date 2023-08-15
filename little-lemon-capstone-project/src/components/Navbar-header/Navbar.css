@@ -18,6 +18,10 @@
     height: 70px; /* Adjust the height to make the logo larger */
     margin-right: 10px;
   }
+  
+  .link.active {
+    color: rgb(173, 173, 13); /* Change this to your desired active color */
+  }
 
   li {
     list-style-type: none;
@@ -36,12 +40,17 @@
     color: inherit;
   }
   
-  ul li a {
+  ul li span {
     margin-left: 1rem;
     color: #495e57;
     text-decoration: none;
     font-family: Karla;
     font-size: x-large;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+
   }
 
   /* Hide MenuIcon on desktop screens */
@@ -53,11 +62,9 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    background-color: burlywood;
+    background-color: #f4ce14;
   }
-  
-  /* Media query for mobile screens */
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .navbar {
       justify-content: space-between;
       background-color: white;
@@ -67,33 +74,31 @@
       height: 4rem;
       width: -webkit-fill-available;
       margin: 0 auto;
-      position: fixed;
-      margin-bottom:96px;
-    }
-    .menu-toggle {
-      display: block; /* Show the menu icon on mobile*/
+
+      margin-bottom:60px;
     }
   
     .menu-list {
       position: fixed;
       top: 4rem;
       left: 0;
-      width: 100%;
+      width: 90%;
       background-color: white;
       padding: 1rem;
       display: none;
+    
     }
 
     .menu-list .link {
-      color: black;
       text-decoration: none;
+      margin: 1em;
+      margin-top: 1em;
     }
     
     /* Add styles for menu items when hovered */
     .menu-list .link:hover {
       color: #495e57;
       text-decoration: none;
-      background-color: burlywood;
     }
   
     .nav.show .menu-list {
@@ -105,11 +110,31 @@
       display: block; /* Show the menu icon on mobile*/
       cursor: pointer;
     }
-      ul li a {
-      margin-left: 1rem;
+    .ul li span {
+      margin-left: 1em;
       color: #495e57;
       text-decoration: none;
       font-family: Karla;
       font-size: 1.1em;
+
     }
-  }
+    ul li {
+      margin: 10px;
+    }
+    ul li:hover {
+      margin: 5px;
+      padding: 5px;
+      background-color: #f4ce14;
+      border-radius: 15px
+    }
+    .menu-list {
+      /* ... other styles ... */
+      position: absolute; /* Reset position */
+      transform: translateX(0); /* Initial position */
+      transition: transform 0.3s ease; /* Transition for smooth animation */
+    }
+    
+    .nav.show .menu-list {
+      transform: translateX(0); /* Move the menu list to the original position */
+    }
+}

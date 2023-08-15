@@ -4,7 +4,7 @@ import Card from '../../components/FoodCard/Card';
 import "./Menu.css";
 const Menu = () => {
     return (
-        <>
+        <div>
             <section className="menu-container">
                 <h1 className="menu-title" >Our Menu</h1>
                 <div className="Categories">
@@ -34,7 +34,7 @@ const Menu = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import Logo from '../../assets/Logo.svg'
 //import MenuIcon from '@material-ui/icons/Menu'
 import MenuIcon from '../../assets/hamburger.svg'
@@ -8,6 +8,7 @@ import './Navbar.css'
 const Navbar = () => {
     const [isMenuOpen, setisMenuOpen] = useState(false)
     const navigate = useNavigate() // hook to navigate to different pages
+    const location = useLocation() // hook to get current location
 
     //function to toggle(switch/swap?) menu (open/close)
     const toggleMenu = () => {
@@ -16,6 +17,11 @@ const Navbar = () => {
 
     const onClickImage = () => {
         navigate('/');  // navigate to home page
+    };
+
+    const handleMenuItemClick = (link) => {
+        navigate(link);
+        setisMenuOpen(false); // Close the menu after clicking a menu item
     };
 
     const menuItems = [
@@ -36,9 +42,12 @@ const Navbar = () => {
                 <ul className={`menu-list ${isMenuOpen ? 'show' : ''}`}>
                     {menuItems.map((item) => (
                         <li key={item.id} >
-                            <a href={item.link} className="link">
+                            <span
+                                className={`link ${location.pathname === item.link ? 'active' : ''}`}
+                                onClick={() => handleMenuItemClick(item.link)}
+                            >
                                 {item.name}
-                            </a>
+                            </span>
                         </li>
                     ))}
                 </ul>

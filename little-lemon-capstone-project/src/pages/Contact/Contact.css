@@ -1,19 +1,28 @@
 .Contact {
-    display: flex;
-    flex: 1;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  fieldset {
-    display: flex;
-    width: 480px;
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Add padding to the container */
+
+   /* Lower z-index to keep the Contact content below Navbar */
+  position: relative;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure that the body takes at least the full viewport height */
+}
+
+fieldset {
+  width: 400px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  background-color: #f9f9f9; /* Add a background color to make the fieldset more distinguishable */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
   
   label {
     margin-bottom: 8px;
