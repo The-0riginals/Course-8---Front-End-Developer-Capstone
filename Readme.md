@@ -43,3 +43,5 @@ By the end of this module, you will have completed the following:
  - A graded assessment in which you synthesize the skills from this course
 
  - A reflection on your learning and the next steps in your developer journey
+
+# link to deployed project: https://capstone-project-restaurant.netlify.app/
