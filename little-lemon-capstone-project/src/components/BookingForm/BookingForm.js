@@ -37,7 +37,7 @@ const BookingForm = ({
     const maxGuests = 10;
 
     return (
-        <form onSubmit={(e) => onFormSubmit(e, formData)}>
+        <form onSubmit={(e) => onFormSubmit(e, formData)}> {/* onFormSubmit is a function that check if form is valid */} 
             <div className="Reservation-container">
                 <label htmlFor="firstName" className="containter-item-title">First Name</label>
                 <input
